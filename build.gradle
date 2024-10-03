@@ -44,3 +44,15 @@ task runWorker(type: JavaExec) {
     main = 'com.example.rabbitmq2.Worker'
     classpath = sourceSets.main.runtimeClasspath
 }
+
+// Custom task for Hello World Send class
+task runSend(type: JavaExec) {
+    main = 'com.example.rabbitmq.Send'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+// Custom task for Hello World Receive class
+task runReceive(type: JavaExec) {
+    main = 'com.example.rabbitmq.Receive'
+    classpath = sourceSets.main.runtimeClasspath
+}
