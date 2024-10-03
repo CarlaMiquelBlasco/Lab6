@@ -1,0 +1,46 @@
+plugins {
+    id 'application'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.rabbitmq:amqp-client:5.16.0'
+    implementation 'ch.qos.logback:logback-classic:1.4.11'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+application {
+    // Set the Help class as the default main class to show instructions
+    mainClass = findProperty('mainClass') ?: 'com.example.Help'
+}
+
+// Custom task for EmitLog class
+task runEmitLog(type: JavaExec) {
+    main = 'com.example.rabbitmq3.EmitLog'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+// Custom task for ReceiveLogs class
+task runReceiveLogs(type: JavaExec) {
+    main = 'com.example.rabbitmq3.ReceiveLogs'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+// Custom task for NewTask class
+task runNewTask(type: JavaExec) {
+    main = 'com.example.rabbitmq2.NewTask'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+// Custom task for Worker class
+task runWorker(type: JavaExec) {
+    main = 'com.example.rabbitmq2.Worker'
+    classpath = sourceSets.main.runtimeClasspath
+}
