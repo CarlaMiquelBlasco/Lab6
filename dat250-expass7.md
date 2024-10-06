@@ -40,7 +40,7 @@ each application:
 - **Experiment 2.3 (Work Queues)**: The `NewTask.java` and `Worker.java` classes in the `com.example.rabbitmq2` package implemented a task queue system using round-robin message distribution between multiple workers.
 - **Experiment 2.4 (Publish/Subscribe with Topics)**: I implemented `EmitLog.java` and `ReceiveLogs.java` in the `com.example.rabbitmq3` package to demonstrate the publish/subscribe pattern using RabbitMQ exchanges.
 All the code for the experiments described above is available at the following link:
-[Link to Code Repository]
+[https://github.com/CarlaMiquelBlasco/Lab6/tree/master/src/main/java/com/example]
 
 ## Pending Issues
 There are no pending issues with the assignment that I was unable to solve.
